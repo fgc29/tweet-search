@@ -3,7 +3,7 @@
 
 Tweet search is a small mean stack app that searches Twitter by the user provided query terms.
 
-![alt text](tweet-search.png" )
+![alt text](./tweet-search.png" )
 ###Installation
 1. Setup environment variables with the following:
   * Consumer Key
