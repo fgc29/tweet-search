@@ -14,9 +14,9 @@ var config          = require('./config/db');
 
 var Search          = require('./app/models/search');
 
-// protect against mongo script injections not needed since I have no user driven query for now
+// protect against mongo script injections
 var sanitize        = require('mongo-sanitize');
-var clean           = sanitize('req.param.searchTerms');
+var clean           = sanitize('req.param.searchTerm');
 
 var port            = process.env.PORT || 8080;
 // twitter credentials
@@ -59,7 +59,7 @@ app.use(function(req, res, next) {
 // ======================================
 
 var apiRoutes = express.Router();
-
+// gets the saved queries in the database
 apiRoutes.get('/saved-searches', function(req, res) {
   var queries = Search.find({}, function(err, q) {
     if (err) throw err;
@@ -67,6 +67,7 @@ apiRoutes.get('/saved-searches', function(req, res) {
   });
 });
 
+// gets tweets based on the user query
 apiRoutes.get('/search',function(req, res) {
 
   var queryTerm = req.query['searchTerm'];
