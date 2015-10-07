@@ -9,7 +9,7 @@
     "scripts": {
     "start": "node server.js",
     "postinstall": "bower install && npm install"
-  }
+  },
   "author": "Francis",
   "license": "ISC",
   "dependencies": {
