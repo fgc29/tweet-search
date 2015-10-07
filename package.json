@@ -1,6 +1,17 @@
 {
   "name": "tweet-search",
+  "version": "0.0.0",
+  "description": "This is a tweet search app",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "scripts": {
+    "start": "node server.js",
+    "postinstall": "bower install && npm install"
+  }
+  "author": "Francis",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.0",
