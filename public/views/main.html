@@ -1,0 +1,38 @@
+<nav class="navbar navbar-fixed-top">
+  <div class="nav-content">
+    <h1 class="header-title">Twitter Search</h1>
+    <div class="search-twitter input-group">
+      <input ng-model="qTerm" type="text" placeholder="search twitter..." class="form-control"/>
+      <span class="search-button input-group-addon" ng-click="getTweets()">
+        <i class="fa fa-plus"></i>
+      </span>
+    </div>
+  </div>
+</nav>
+<div id="content">
+  <section class="saved-queries col-md-4">
+    <h1>Saved Queries</h1>
+    <hr>
+    <ul class="card-container">
+      <li class="query-card" ng-repeat="query in savedSearches | orderBy:'-date'">
+        <p>query: {{query.text}}</p>
+        <p am-time-ago="query.date"></p>
+      </li>
+    </ul>
+  </section>
+  <section class="search col-md-8">
+    <h1>Results</h1>
+    <hr>
+    <ul class="card-container">
+      <li class="tweet-card" ng-repeat="tweet in tweets | orderBy:'-createdAt'">
+        <span><img src="{{tweet.pic}}" class="user-img"/></span>
+        <span class="user-name">{{tweet.screenName}}</span>
+        <span class="user-date"am-time-ago="tweet.createdAt"></span>
+        <div class="user-tweet">{{tweet.tweet}}</div>
+
+
+      </li>
+    </ul>
+
+  </section>
+</div>

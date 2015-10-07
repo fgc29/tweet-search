@@ -1,0 +1,117 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  overflow: hidden;
+  height: 1000px;
+  font-family: 'Arvo', serif;
+}
+#content {
+  height: 1000px;
+  margin-top: 200px;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  height: 200px;
+  /*color: #fff;*/
+  background: #2AB0CC;
+  background-image: linear-gradient(-147deg, #35ce93 0%, #59adeb 100%);
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+}
+.header-title {
+  letter-spacing: 2px;
+}
+.nav-content{
+  margin-top: 50px;
+}
+.saved-queries {
+  height: 100%;
+}
+.search {
+  height: 100%;
+}
+.card-container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /*margin-left: 35px;*/
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+.tweet-card, .query-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 25px;
+  width: 80%;
+  height: auto;
+}
+.user-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  font-family: 'Droid Serif', serif;
+  letter-spacing: 2px;
+}
+.search h1 {
+  color: #35ce93;
+}
+.saved-queries h1 {
+  color: #59adeb;
+}
+.tweet-card span {
+  /*float: right;*/
+  display: block;
+  /*clear: both;*/
+}
+.user-name, .user-date{
+  font-style: italic;
+}
+.user-tweet {
+  margin-top: 25px;
+}
+.query-card {
+  text-align: center;
+}
+/*button*/
+.search-twitter {
+  text-align: center;
+  width: 50%;
+  margin-left:25%;
+}
+input[type="text"] {
+    background-color: rgba(255,255,255,.20);
+    border: none;
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+input[type="text"]::-webkit-input-placeholder {
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.search-button {
+  background-color: #59adeb;
+  border: none;
+  color: rgba(255,255,255, .60);
+}
