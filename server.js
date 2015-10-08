@@ -1,6 +1,9 @@
 var express         = require('express');
 var app             = express();
 
+var Ddos = require('ddos')
+var ddos = new Ddos({maxexpiry: 40});
+
 var bodyParser      = require('body-parser');
 
 var mongoose        = require('mongoose');
@@ -32,6 +35,8 @@ mongoose.connect( process.env.MONGOLAB_URI || config.database);
 
 app.set('superSecret', config.secret);
 // applying security elements to the app
+
+app.use(ddos.express);
 app.use(cookieParser(config.cookieSecret, { httpOnly: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
