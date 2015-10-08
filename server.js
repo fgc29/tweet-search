@@ -2,7 +2,7 @@ var express         = require('express');
 var app             = express();
 
 var Ddos = require('ddos')
-var ddos = new Ddos({maxexpiry: 40});
+var ddos = new Ddos({maxexpiry: 40, errormessage: "Too many request in a short period of time from this ip, please what 2 minutes!"});
 
 var bodyParser      = require('body-parser');
 
