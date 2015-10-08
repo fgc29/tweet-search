@@ -1,7 +1,7 @@
 #Tweet Search
 ---
 
-Tweet search is a small mean stack app that searches Twitter by the user provided query terms.
+Tweet search is a small mean stack app that searches Twitter by the user provided query terms. The hosted app is [here!](https://tweet-search-app.herokuapp.com/)
 
 ![](tweet-search.png)
 ##Installation
